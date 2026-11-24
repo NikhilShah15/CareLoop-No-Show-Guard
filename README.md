@@ -9,8 +9,11 @@ CareLoop Clinics. No-Show Guard is a data analysis and machine learning project.
 Key Findings
 
 Part 1 — Data Foundations: Cleaned 1,020 raw appointment records into 990 usable records, identifying 218 no-shows.
+
 Part 2 — SQL Analysis: Found that appointments booked 31 or more days in advance had the highest no-show rate of 60.5%.
+
 Part 3 — Machine Learning: Logistic Regression achieved a cross-validation ROC-AUC of 0.774, with a selected risk threshold of 0.35.
+
 Part 4 — GenAI Analysis: Analysed 10 follow-up notes, with 9 valid results and 1 blank note skipped.
 
 Business Recommendation
@@ -22,10 +25,16 @@ Machine Learning Model
 Selected Model: Logistic Regression
 
 Why it was selected:
+
 It achieved the highest cross-validation ROC-AUC among the compared models.
+
 Its cross-validation ROC-AUC was 0.774.
+
+
 It provided a useful balance of interpretability and predictive performance.
+
 Selected Risk Threshold: 0.35
+
 The threshold was selected using out-of-fold predictions on the training data. It produced a higher F1-score than the 0.50 threshold, making it more suitable for identifying appointments that may need follow-up.
 
 Limitations
@@ -39,26 +48,43 @@ Changing circumstances: Unexpected events such as illness, emergencies, transpor
 Project Structure
 
 01_ingest_clean.ipynb — Part 1: Python data ingestion and cleaning.
+
 rejected_rows.json — Rejected records from initial ingestion.
+
 appointments_clean.csv — Cleaned appointment dataset.
+
 clinics_enriched.csv — Clinic data enriched with weather information.
+
 load_data.sql — SQL insert statements for database loading.
+
 02_queries.sql — Part 2: SQL analysis queries.
+
 03_model.ipynb — Part 3: Machine learning workflow.
+
 test_risk_scores.csv — Test-set risk predictions.
+
 04_genai.ipynb — Part 4: GenAI follow-up note analysis.
+
 notes_analysed.csv — Validated follow-up note analysis results.
+
 data/ — Original appointment, clinic and follow-up note datasets.
 
 Tools and Technologies
 
 Python
+
 Pandas and NumPy
+
 Scikit-learn
+
 SQL / MySQL
+
 Google Colab
+
 Open-Meteo API
+
 Gemini API
+
 Pydantic
 
 
