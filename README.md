@@ -15,6 +15,10 @@ CareLoop Clinics. No-Show Guard is a data analysis and machine learning project.
 - **Part 3 — Machine Learning:** Logistic Regression achieved a cross-validation ROC-AUC of 0.774, with a selected risk threshold of 0.35.
 - **Part 4 — GenAI Analysis:** Analysed 10 follow-up notes, with 9 valid results and 1 blank note skipped.
 
+## Business Question
+
+**Which appointments are most likely to be missed, why do patients miss them, and what should CareLoop do first?**
+
 ## Business Recommendation
 
 CareLoop should concentrate its follow‑up efforts on appointments that are booked a time before. For example, appointments with a time of 31 days or more had a 60.5 percent no‑show rate. In contrast, appointments booked 1 to 7 days ahead had a 16.2 percent no‑show rate. Among 990 cleaned appointments, 218, which's 22.0 percent, were missed. This shows that no‑shows are a problem for the clinics. To help find appointments that need attention, the Logistic Regression model was chosen. This model had a cross‑validation ROC‑AUC of 0.774 and a risk threshold of 0.35. With this model, the front desk can prioritise calls to patients who're more likely to miss their appointments. In addition, the analysis of 10 follow‑up notes, of which 9 were classified correctly, gives insight into reasons for missed appointments. CareLoop can use these findings to prioritise follow‑ups and to better understand why patients miss appointments.
