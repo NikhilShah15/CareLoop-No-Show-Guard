@@ -24,21 +24,13 @@ Machine Learning Model
 
 Selected Model: Logistic Regression
 
-Why it was selected:
+Crossvalidation ROC-AUC: 0.774
 
-It achieved the highest cross-validation ROC-AUC among the compared models.
+Selected threshold: 0.35
 
-Its cross-validation ROC-AUC was 0.774.
+Test ROC-AUC: Approximately 0.79
 
-
-It provided a useful balance of interpretability and predictive performance.
-
-Selected Risk Threshold: 0.35
-
-The threshold was selected using out-of-fold predictions on the training data. It produced a higher F1-score than the 0.50 threshold, making it more suitable for identifying appointments that may need follow-up.
-
-
-The final model was evaluated on the held-out test set, achieving an ROC-AUC of approximately 0.79.
+Logistic Regression was selected because it achieved the highest cross-validation ROC-AUC among the compared models. The 0.35 threshold was selected using out-of- training predictions because it produced a higher F1-score than the 0.50 threshold.
 
 Limitations
 
@@ -50,27 +42,24 @@ Changing circumstances: Unexpected events such as illness, emergencies, transpor
 
 Project Structure
 
-01_ingest_clean.ipynb — Part 1: Python data ingestion and cleaning.
-
-rejected_rows.json — Rejected records from initial ingestion.
-
-appointments_clean.csv — Cleaned appointment dataset.
-
-clinics_enriched.csv — Clinic data enriched with weather information.
-
-load_data.sql — SQL insert statements for database loading.
-
-02_queries.sql — Part 2: SQL analysis queries.
-
-03_model.ipynb — Part 3: Machine learning workflow.
-
-test_risk_scores.csv — Test-set risk predictions.
-
-04_genai.ipynb — Part 4: GenAI follow-up note analysis.
-
-notes_analysed.csv — Validated follow-up note analysis results.
-
-data/ — Original appointment, clinic and follow-up note datasets.
+CareLoop-No-Show-Guard/
+├── README.md
+├── 01_ingest_clean.ipynb
+├── rejected_rows.json
+├── appointments_clean.csv
+├── clinics_enriched.csv
+├── load_data.sql
+├── 02_queries.sql
+├── 03_model.ipynb
+├── test_risk_scores.csv
+├── 04_genai.ipynb
+├── notes_analysed.csv
+├── task_4_4_crosstab.csv
+├── task_4_4_merged.csv
+└── data/
+    ├── appointments.csv
+    ├── clinics.csv
+    └── followup_notes.csv
 
 Tools and Technologies
 
