@@ -42,23 +42,41 @@ Changing circumstances: Unexpected events such as illness, emergencies, transpor
 
 Project Structure
 
+
 CareLoop-No-Show-Guard/
+
 ├── README.md
+
 ├── 01_ingest_clean.ipynb
+
 ├── rejected_rows.json
+
 ├── appointments_clean.csv
+
 ├── clinics_enriched.csv
+
 ├── load_data.sql
+
 ├── 02_queries.sql
+
 ├── 03_model.ipynb
+
 ├── test_risk_scores.csv
+
 ├── 04_genai.ipynb
+
 ├── notes_analysed.csv
+
 ├── task_4_4_crosstab.csv
+
 ├── task_4_4_merged.csv
+
 └── data/
+   
     ├── appointments.csv
+    
     ├── clinics.csv
+    
     └── followup_notes.csv
 
 Tools and Technologies
