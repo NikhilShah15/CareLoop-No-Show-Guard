@@ -37,6 +37,9 @@ Selected Risk Threshold: 0.35
 
 The threshold was selected using out-of-fold predictions on the training data. It produced a higher F1-score than the 0.50 threshold, making it more suitable for identifying appointments that may need follow-up.
 
+
+The final model was evaluated on the held-out test set, achieving an ROC-AUC of approximately 0.79.
+
 Limitations
 
 Model generalisation: Logistic Regression performed best on the data that we have. However, the performance of Logistic Regression may change when we apply it in clinics that have different patients, different appointment patterns or different data characteristics. The model is a tool that learns from the data we give it. It may not work exactly the same way in every clinic.
@@ -86,7 +89,3 @@ Open-Meteo API
 Gemini API
 
 Pydantic
-
-
-
-The final model was evaluated on the held-out test set, achieving an ROC-AUC of approximately 0.79.
