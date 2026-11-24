@@ -51,24 +51,29 @@ Unexpected events such as illness, emergencies, transport problems or changes in
 CareLoop-No-Show-Guard/
 │
 ├── README.md
-├── 01_ingest_clean.ipynb
-├── rejected_rows.json
-├── appointments_clean.csv
-├── clinics_enriched.csv
-├── load_data.sql
-├── 02_queries.sql
-├── 03_model.ipynb
-├── test_risk_scores.csv
-├── 04_genai.ipynb
-├── notes_analysed.csv
-├── task_4_4_crosstab.csv
-├── task_4_4_merged.csv
+│
+├── 01_ingest_clean.ipynb       # Part 1: Python data ingestion and cleaning
+├── rejected_rows.json         # Rejected records from initial ingestion
+├── appointments_clean.csv     # Cleaned appointment dataset
+├── clinics_enriched.csv       # Clinic data enriched with weather information
+├── load_data.sql               # SQL insert statements for database loading
+│
+├── 02_queries.sql              # Part 2: SQL analysis queries
+│
+├── 03_model.ipynb              # Part 3: Machine learning workflow
+├── test_risk_scores.csv        # Test-set risk predictions
+│
+├── 04_genai.ipynb              # Part 4: GenAI follow-up note analysis
+├── notes_analysed.csv          # Validated follow-up note analysis results
+├── task_4_4_crosstab.csv       # Part 4: Follow-up note and reminder cross-tabulation
+├── task_4_4_merged.csv         # Part 4: Merged follow-up note and appointment data
 │
 └── data/
-    ├── appointments.csv
-    ├── clinics.csv
-    └── followup_notes.csv
+    ├── appointments.csv        # Original appointment dataset
+    ├── clinics.csv             # Original clinic dataset
+    └── followup_notes.csv      # Original follow-up notes dataset
 ```
+
 
 ## Tools and Technologies
 
